@@ -1,0 +1,203 @@
+Cloud - servers which are accessed over the internet,located in data centres
+cloud computing - storing and accessing data over the internet
+types of clouds - Public cloud(avaialable anyone,ex-elastic compute cloud,ec2)private(used by the organisation to build and manage and their own data centres internally or by the third party),hybrid cloud is a mixture of public and private cloud.ex - gmail , google apps and google drive,office 365
+
+Types of cloud services - infrastrute as service(helps to avoid cost and complexity of purchasing and managing the physical servers),platform as service(design and check,run to handle the applications for programmer) , software as a service(hosting the applications)
+
+Instanes - 
+
+services provided by aws- compute services,storage, database services etc
+compute services - ec2,lambda, elastic beanstalk, amazon lightsail
+storage services - (simple storage service),amazon glacier
+networking services and content delivery - aws cloud front, amazon route 53
+security services - aws IAM, KMS
+data base services -RDS, Aurora
+analytic services - athena, cloudsearch ,glue
+media and technology services - ar,vr, game development
+managment tools - cloud watch and cloud formation
+
+advantages aws - cost efficienct , high speed, excellent accessibilty,back up restore data
+disadvantages - vulenerable to attacks , network connectivity, limited control, downtime
+
+##click on "all services" to access anything ,on home of aws(console home)
+IAM(identity and access management) - every department has their own role , so access to tools and services is also given is limited by the administrator
+definition - web service that helps you manage access aws services in a secure manner.used for setting users roles and permissions
+
+Virtual private cloud (VPC) - personal cloud given by AWS.
+Important keywords - *subnet - breaking large network into small ones
+route table - table containing routes for routing of traffic in and out for subnet(in short set of rules)
+Internet gateway - links instance to internet.(helps user to public subnet by providing a route)
+
+Steps to create VPC
+*go to vpc dashboard , click on launch vpc wizard
+*click start vpc wizard button,click the vpc on LHS with a single public subnet
+*Information needed to create VPC - IPv4 cidr block,vpc name,public subnets cidr,availability zone,subnet name,hardware tendency
+*click ok,go to "Your vpc"
+
+Important(relating to vpc)- create a public and private subnet inside VPC
+*click on your vpc ,right click and create vpc
+*give a name and mention the ipv4 CIDR block,click create.
+
+*creating a subnet- go to subnet ,choose your vpc ,create a subnet named private,select other things,click create
+
+Route 53 - web service highly available and scalable DNS, helps developers to connect end users in secure and scalable name to their web applications ex - it converts www addressess to ip address.
+
+Direct connect - makes private network access to aws location from out network(simple lang. me aapka data private network me rehta hai ),helpful in workloads with high latency
+
+STORAGE AND DATABASES
+
+AWS S3 offers file storage designed to store and retrieve it.Data is stored in BUCKET 
+
+Create a bucket
+
+*login into aws management console
+*click on all services, click on storage and choose s3
+*click on create button
+*choose region,click create
+*select your bucket and then click on upload button,enable public access to the object,that has been uploded .
+
+Cloudfront - its a content delivery network(CDN),its task is to collect data from S3 and deliver to multiple locations in the data centre. benefits - less load on the server,reduces cost,makes site more reliable
+
+Create a cloud front 
+
+*open cloud front console ,click on create distribution
+*input the data ,click on create distribution tab,after then it will create a link
+
+*Imp AWS dynamoDB - its aws long tunnng full hosted Nosql engine(since 2012),its task is to creation of databases tables that can store and recover any volume of data,manages table data traffic and maintains perfomance.(characterstics - fast,easy,straight forward to calculate,low latency
+
+REDSHIFT - its a cloud based fully managed data centre service.(benefits - cost effective,simple to set up and operate,provides columnar storage ,compression, and parallel procession to reduce the amount of i/o queries
+
+Create a red shift - click on the services then navigate to databases click on red shift,click on launch cluster,now set up the cluster,set up the nodes single node is okay,click continue and click launch cluster.
+
+AWS analytics services - aim to determine what could happen in future based on past outcomes(for example - youtube recommendations)
+SERVICES - athena - interactive query service,makes easy to analyze data 
+cloud search -  scales data(both structured and unstructured data)
+kinesis - analysis of text and video(amazon pe koi cheez search krte hai to uske ads baaki jagah bhi aane lagte hai)
+AWS glue - takes data from the source,transform it and then fees it to other source
+
+MACHINE LEARNING - makes the use of algorithms , mathematical models , based on user data , to create predictive applications.(services by aws - sagemaker , comprehend ,deep lens,lex)
+Sagemaker - use to build train and deploy machine learning models at scale.
+Comprehend - helps to discover insights and relationships in texts .
+Deep lens - analyzes video throufh a mini computer called deep lens physical unit.
+Lex - create your digital voice assistant,using it in background.
+Rekognition - capability of deep learning analysis to identify the images and video
+Transcribe - translates
+
+IoT(internet of things)
+its a network of physical objects and people called things,embedded with software ,electronics, network,and sensors that allow data colllection and sharing of these items. OR getting connected to everything
+Amazon green grass - provides you a local compute service
+
+EC2 - stands for  amazon elastic compute cloud , its nothing just a virtual server(for example sometimes govt sites get down,then in that case we can rent ec2 for per hour cost.
+
+Lambda -serverless compute  service. It executes your back end code by automatically managing the aws resources.
+
+**Application and gaming console
+
+Mobile services - services or possibilites available in mobile phones.
+*AWS mobile hub - enables individual to create and deploy applications easily on the platform\
+*AWS pinpoint - helps to monitor the way users communicate with the app.
+*App sync - synchronises the data in backend
+*AWS mobile analytics - measure app usage and app revenue
+
+Application integration - enabling designed app to work together
+1. Step functions - organize various application into serveless workflows so that it can be modified
+2.Simple notification service - sending messages on aws platform
+3. simple queue service - its store space,use to send, store and retrieve multiple messages
+4. simple workflow service - build,run,that have parallel or sequential steps.
+
+Desktop and app streaming 
+Workspaces - virtual desktop environment,helps to eliminate the complexity in managing hardware
+
+Media service (used by netflix,hotstar, prime etc)
+AWS elastic transcoder - before machines have to set up,now aws video infrastructure is used for planning encoding and distributing on demamd and live content in cloud
+AWS elemental services - for tv and streaming to internet connected computers 
+
+FOR VR
+only SAMARIUM is available in amazon suits
+FOR GAMING
+amazon game lift
+
+Popular management tools
+Amazon Cloud watch - used for monitoring ,ex how much memory and cpu are they using
+cloud formation - creates template and deploy stack of aws resources as defined in template
+cloud tail - recorder that retains evidence of all calls and queries you have made(in short tracks user activity and api usage)
+trusted advisor - tells how to optimise your usage of aws
+
+
+Remaining important
+Types of volume ec2 - EBS - elastic book store(instance delete krne ke baad bhi delete nhi hota),Instance store volumes
+auto scaling -  automatically scale-up and scale-down the number of instances depending on 
+the CPU utilization or memory utilization.
+reserved instances - reserve a fixed capacity of EC2 instances
+Glacier - Glacier is the back up or archival tool that you use to back up your data in S3.
+Snowball - data transfer(transfer large chunk of data out of aws)
+Load balancers improve application performance by increasing response time and reducing network latency
+Types of load balancers - Application load balancer 
+• Network load balancer 
+• Classic load balancer
+ Dynamic port mapping, multiple port multiple listeners is used in Application Load Balancer, One port 
+one listener is achieved via Classic Load Balancer
+Security groups - 
+a) Classic Load Balancer - works on both layer 7 and 4. It routes the traffic between clients and backend servers based on IP address.
+
+b) Application Load Balancer - works on layer 7(application layer), supports path based virtual hosting. It is best suited for load balancing of HTTP and HTTPs traffic.
+
+c) Network Load Balancer - works on layer 4(network layer), supports port based virtual hosting. It is best suited for load balancing the TCP traffic when high performance is required.
+FTP: 20, 21
+HTTP: 80
+HTTPS: 443
+SMTP: 25
+DNS: 53
+Telnet: 23
+apache - client server - uses httpd(d stands for dameon:continuously runs in background) that creates a pool of child processes or threads to handle requests.
+nginx - proxy server
+Kubernetes automates operational tasks of container management and includes built-in commands for deploying applications, rolling out changes to your applications, scaling your applications up and down to fit changing needs, monitoring your applications, and more—making it easier to manage applications.
+Maps Domain names with their IP addresses
+Hypervisor -  It is a type of computer software, firmware or hardware that creates and runs virtual machines.
+NAT - ( network address translation ) It's a way to map multiple private addresses inside a local network to a public IP address before transferring the information onto the internet.
+dockers - Docker is a platform designed to help developers build, share, and run container applications
+
+
+How to create ec2 instance?(practical)
+*go to ec2,click on launch instance, create key pair under key pair option. Select PPK,click create
+*click on security tab,see the security groups ,go to network security click Security Groups,click the desired one and select edit inbound rules,select add, select http ,select 0.0.0....ssss
+*click launch instance,click on id generated,to access open Putty(ssh client)
+*ssh>auth>credentials,put your key
+*go to session,put public ip(copy from instance),host name me ubuntu@65.2.190.131(ya koi public ip jo instance me ho,now just launch(aur bn gya VM)
+
+now run these commands on putty
+sudo su( to become administrator)
+apt update
+apt install nginx
+
+
+
+
+Project 
+Use aws to deploy application(through github)
+
+first we need to understand ML parts i.e 
+*train - pre trained model
+*predict- model + supporting files(category variable buckets)
+
+1.run putty ppk,then use following commands
+ sudo su -
+ yum update -y
+ yum install -y httpd
+ systemctl status httpd
+ mkdir aws_assg3
+ cd aws_assg3
+2. write "wget" then copy the link of github code(or apk)(most recommended of https)
+3. write ls -lrt
+4. wget and then copy github link of zip file
+using the wget command, download the zip file to the folder
+unzip the master.zip file and navigate in to the "github_Portfolio-master folder using the cd command
+ 11. move all the contents from the folder to “/var/www/html/”
+
+check the status of httpd and then enable & start httpd using the following commands
+  systemctl status httpd
+  systemctl enable httpd
+  systemctl start httpd
+
+
+
